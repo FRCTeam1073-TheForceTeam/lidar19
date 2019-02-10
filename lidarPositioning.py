@@ -116,24 +116,15 @@ class fieldCoordinates:
 
         return {'x': 0,'y':0}
 
-
 # Simple test
 lidar = RPLidar('COM3')
 time.sleep(5)
 
 coordinateFinder = fieldCoordinates(lidar)
 
-
-
-
-
 position = coordinateFinder.getCurrentPosition(0)
 print ("Position : " + str(position))
 
-lidar.stop()
 lidar.stop_motor()
+lidar.stop()
 lidar.disconnect()
-
-
-
-
